@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigSmallCar</title>
+    <!-- fonts -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <!-- bootstrap 5 css -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- menu.css -->
+        <nav class="menu-top">
+            <!-- основная навигация сайта -->
+            <div class="bg-lgray py-3 d-none d-sm-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-7 col-md-8 col-lg-9">
+                            <ul class="nav-menu d-flex">
+                                <li><a href="">О нас</a></li>
+                                <li><a href="">Помощь</a></li>
+                                <li><a href="">Продавцу</a></li>
+                                <li><a href="">Контакты</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-5 col-md-4 col-lg-3">
+                            <a href="" class="text-right">Вход и регистрация</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container position-relative">
+                <div class="row align-items-center py-2 py-sm-3">
+                    <!-- гамбургер -->
+                    <div class="col-12 d-sm-none position-absolute burger-menu d-lg-none d-flex align-items-center mr-3">
+                        <a href="#" class="burger-menu__btn">
+                            <span></span>
+                        </a>
+                    </div>
+                    <!-- логотип -->
+                    <div class="col-12 col-sm-3 col-md-3 col-lg-2 d-flex d-sm-block justify-content-center ">
+                        <a href="" class="logo"><img src="img/logo.png" alt=""></a>
+                    </div>
+                    <!-- локация -->
+                    <div class="col-sm-2 col-md-2 col-lg-3 px-sm-0 px-md-2 d-none d-sm-block">
+                        <a href="" class="text-center">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-geo-alt mr-1" fill="#006fad" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                            </svg>
+                            Москва
+                        </a>
+                    </div>
+                    <!-- поиск по сайту -->
+                    <div class="col-sm-7 col-md-7 mt-2 my-sm-0">
+                        <form class="search d-flex">
+                            <input type="text" placeholder="Поиск по объявлениям">
+                            <button class="btn">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search d-sm-none" fill="#8a8a8a" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                                  <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                                </svg>
+                                <span class="d-none d-sm-inline">Подобрать</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <!-- меню с категориями -->
+                <ul class="row menu-category justify-content-between py-2 py-sm-3">
+                    <li class="col-3">
+                        <div class="dropdown">
+                            <a href="" class="dropdown-toggle align-items-center" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                                <svg width="20" height="13" viewBox="0 0 16 16" class="bi bi-grid-3x3-gap-fill d-sm-none" fill="#006fad" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z"/>
+                                </svg>
+                                Каталог <span class="d-none d-sm-inline">автозапчастей</span>
+                            </a>
+                            <ul class="dropdown-menu menu-category__drop active bg-white py-3 px-3 box-shadow" aria-labelledby="dropdownMenuButton">
+                                <li><a href="">Автомобили <span class="ml-2 text-blue">978</span></a></li>
+                                <li><a href="">Аксессуары<span class="ml-2 text-blue">978</span></a></li>
+                                <li><a href="">Аудио и видео<span class="ml-2 text-blue">978</span></a></li>
+                                <li><a href="">Выхлопная система<span class="ml-2 text-blue">978</span></a></li>
+                                <li><a href="">Двигатель<span class="ml-2 text-blue">978</span></a></li>
+                                <li><a href="">Мототехника<span class="ml-2 text-blue">978</span></a></li>
+                                <li><a href="">Подвеска<span class="ml-2 text-blue">978</span></a></li>
+                                <li><a href="">Топливная система<span class="ml-2 text-blue">978</span></a></li>
+                                <li><a href="">Шины и диски<span class="ml-2 text-blue">978</span></a></li>
+                                <!-- скрыт -->
+                                <li><a href="">Автомобили<span class="ml-2 text-blue">978</span></a></li>
+                                <li><a href="">Автомобили<span class="ml-2 text-blue">978</span></a></li>
+                                <li><a href="">Автомобили<span class="ml-2 text-blue">978</span></a></li>
+                                <li><a href="">Автомобили<span class="ml-2 text-blue">978</span></a></li>
+                                <li><a href="">Автомобили<span class="ml-2 text-blue">978</span></a></li>
+                                <li><a href="">Автомобили<span class="ml-2 text-blue">978</span></a></li>
+                                <li><a href="">Автомобили<span class="ml-2 text-blue">978</span></a></li>
+                                <li><a href="">Автомобили<span class="ml-2 text-blue">978</span></a></li>
+                                <li><a href="">Автомобили<span class="ml-2 text-blue">978</span></a></li>
+                                <!-- кнопка показать больше - скрыть -->
+                                <li>
+                                    <a class="text-blue mt-4 fw-6 link-open">Показать больше категорий</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="col-auto">
+                        <a href="">Автомобили</a>
+                    </li>
+                    <li class="col-auto">
+                        <a href="">Мототехника</a>
+                    </li>
+                    <li class="col-auto">
+                        <a href="">Магазины</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- header - баннеры -->
+        <header class="header bg-lblue py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- горизонтальный баннер -->
+                    <div class="col-md-8 col-lg-9 col-xl-6 offset-xl-3 px-xl-0 pr-md-0">
+                        <!-- Swiper -->
+                        <div class="slider-banner swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide header-banner" style="background: url(img/bg-banner.jpg) no-repeat center /cover;">
+                                    <div class="content d-flex flex-column justify-content-between h-100">
+                                        <div class="block">
+                                            <img src="img/logo-grade.png" alt="" class="logo">
+                                            <!-- <img src="img/text-sgrade.png" alt="" class="mt-5 mb-3"> -->
+                                            <p class="title-big">S Grade</p>
+                                        </div>
+                                        <div class="block">
+                                            <div class="title my-3 my-lg-4">
+                                                <h1 class="text-white">Магазин автозапчастей <br> по доступным ценам в Краснодаре!</h1>
+                                            </div>
+                                            <span class="fw-3 text-white f-18">2 200 объявлений</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide header-banner" style="background: url(img/bg-banner.jpg) no-repeat center /cover;">
+                                    <div class="content d-flex flex-column justify-content-between h-100">
+                                        <div class="block">
+                                            <img src="img/avto-logo3.png" alt="" class="logo">
+                                            <p class="title-big">Zaparts</p>
+                                        </div>
+                                        <div class="block">
+                                            <div class="title my-3 my-lg-4">
+                                                <h1 class="text-white">Большой выбор автозапчастей <br> по доступным ценам!</h1>
+                                            </div>
+                                            <span class="fw-3 text-white f-18">2 200 объявлений</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide header-banner" style="background: url(img/bg-banner.jpg) no-repeat center /cover;">
+                                    <div class="content d-flex flex-column justify-content-between h-100">
+                                        <div class="block">
+                                            <img src="img/avto-logo3.png" alt="" class="logo">
+                                            <p class="title-big">Zaparts</p>
+                                        </div>
+                                        <div class="block">
+                                            <div class="title my-3 my-lg-4">
+                                                <h1 class="text-white">Большой выбор автозапчастей <br> по доступным ценам!</h1>
+                                            </div>
+                                            <span class="fw-3 text-white f-18">2 200 объявлений</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                    <!-- вертикальный баннер -->
+                    <div class="col-md-4 col-lg-3 d-none d-md-block">
+                        <a href="" class="header-banner header-banner_vert d-flex justify-content-center align-items-center">
+                            <div class="content text-center">
+                                <img src="img/volkswagen.png" alt="" class="m-auto">
+                                <p class="f-20 fw-6 text-white">запчасти и <br> аксессуары</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- секция -->
+        <section class="py-4">
+            <div class="container">
+                <h2 class="text-center pb-3">
+                    Магазины автозапчастей
+                </h2>
+                <!-- Swiper -->
+                <div class="slider-card pt-5 pt-sm-0 mt-sm-5">
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next slider-shop-link_next"></div>
+                    <div class="slider-shop-link swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="" class="link">
+                                    <img src="img/avto-logo1.png" alt="">1
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="" class="link">
+                                    <img src="img/avto-logo2.png" alt="">2
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="" class="link">
+                                    <img src="img/avto-logo3.png" alt="">3
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="" class="link">
+                                    <img src="img/avto-logo4.png" alt="">4
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="" class="link">
+                                    <img src="img/avto-logo1.png" alt="">5
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="" class="link">
+                                    <img src="img/avto-logo2.png" alt="">6
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="" class="link">
+                                    <img src="img/avto-logo3.png" alt="">7
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="" class="link">
+                                    <img src="img/avto-logo4.png" alt="">8
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="" class="link">
+                                    <img src="img/avto-logo1.png" alt="">9
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-prev slider-shop-link_prev"></div>
+                </div>
+            </div>
+        </section>
+        <!-- секция -->
+        <section class="py-4">
+            <div class="container">
+                <h2 class="text-center pb-3">
+                    Категории объявлений
+                </h2>
+                <div class="slider-card">
+                    <!-- Swiper -->
+                    <div class="slider-category-link hide-slider swiper-container" data-mobile="false">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide px-2 pt-2">
+                                <div class="d-block w-100 px-2 px-md-3">
+                                    <a href="" class="link row align-items-center p-2 p-sm-3">
+                                        <span class="col-sm-3 p-0 mb-1 mb-sm-0">
+                                            <img src="img/avto-logo1.png" alt="" class="mx-auto">
+                                        </span>
+                                        <span class="col-sm-8 pr-0 text-center text-sm-left">
+                                            1GPS-навигаторы
+                                        </span>
+                                    </a>
+                                    <a href="" class="link row align-items-center p-2 p-sm-3">
+                                        <span class="col-sm-3 p-0 mb-1 mb-sm-0">
+                                            <img src="img/avto-logo2.png" alt="" class="mx-auto">
+                                        </span>
+                                        <span class="col-sm-8 pr-0 text-center text-sm-left">
+                                            GPS-навигаторы
+                                        </span>
+                                    </a>
+                                    <a href="" class="link row align-items-center p-2 p-sm-3">
+                                        <span class="col-sm-3 p-0 mb-1 mb-sm-0">
+                                            <img src="img/avto-logo3.png" alt="" class="mx-auto">
+                                        </span>
+                                        <span class="col-sm-8 pr-0 text-center text-sm-left">
+                                            GPS-навигаторы
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide px-2 pt-2">
+                                <div class="d-block w-100 px-2 px-md-3">
+                                    <a href="" class="link row align-items-center p-2 p-sm-3">
+                                        <span class="col-sm-3 p-0 mb-1 mb-sm-0">
+                                            <img src="img/avto-logo4.png" alt="" class="mx-auto">
+                                        </span>
+                                        <span class="col-sm-8 pr-0 text-center text-sm-left">
+                                            2GPS-навигаторы
+                                        </span>
+                                    </a>
+                                    <a href="" class="link row align-items-center p-2 p-sm-3">
+                                        <span class="col-sm-3 p-0 mb-1 mb-sm-0">
+                                            <img src="img/avto-logo1.png" alt="" class="mx-auto">
+                                        </span>
+                                        <span class="col-sm-8 pr-0 text-center text-sm-left">
+                                            GPS-навигаторы
+                                        </span>
+                                    </a>
+                                    <a href="" class="link row align-items-center p-2 p-sm-3">
+                                        <span class="col-sm-3 p-0 mb-1 mb-sm-0">
+                                            <img src="img/avto-logo2.png" alt="" class="mx-auto">
+                                        </span>
+                                        <span class="col-sm-8 pr-0 text-center text-sm-left">
+                                            GPS-навигаторы
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide px-2 pt-2">
+                                <div class="d-block w-100 px-2 px-md-3">
+                                    <a href="" class="link row align-items-center p-2 p-sm-3">
+                                        <span class="col-sm-3 p-0 mb-1 mb-sm-0">
+                                            <img src="img/avto-logo3.png" alt="" class="mx-auto">
+                                        </span>
+                                        <span class="col-sm-8 pr-0 text-center text-sm-left">
+                                            3GPS-навигаторы
+                                        </span>
+                                    </a>
+                                    <a href="" class="link row align-items-center p-2 p-sm-3">
+                                        <span class="col-sm-3 p-0 mb-1 mb-sm-0">
+                                            <img src="img/avto-logo3.png" alt="" class="mx-auto">
+                                        </span>
+                                        <span class="col-sm-8 pr-0 text-center text-sm-left">
+                                            GPS-навигаторы
+                                        </span>
+                                    </a>
+                                    <a href="" class="link row align-items-center p-2 p-sm-3">
+                                        <span class="col-sm-3 p-0 mb-1 mb-sm-0">
+                                            <img src="img/avto-logo4.png" alt="" class="mx-auto">
+                                        </span>
+                                        <span class="col-sm-8 pr-0 text-center text-sm-left">
+                                            GPS-навигаторы
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide px-2 pt-2">
+                                <div class="d-block w-100 px-2 px-md-3">
+                                    <a href="" class="link row align-items-center p-2 p-sm-3">
+                                        <span class="col-sm-3 p-0 mb-1 mb-sm-0">
+                                            <img src="img/avto-logo1.png" alt="" class="mx-auto">
+                                        </span>
+                                        <span class="col-sm-8 pr-0 text-center text-sm-left">
+                                            1GPS-навигаторы
+                                        </span>
+                                    </a>
+                                    <a href="" class="link row align-items-center p-2 p-sm-3">
+                                        <span class="col-sm-3 p-0 mb-1 mb-sm-0">
+                                            <img src="img/avto-logo2.png" alt="" class="mx-auto">
+                                        </span>
+                                        <span class="col-sm-8 pr-0 text-center text-sm-left">
+                                            GPS-навигаторы
+                                        </span>
+                                    </a>
+                                    <a href="" class="link row align-items-center p-2 p-sm-3">
+                                        <span class="col-sm-3 p-0 mb-1 mb-sm-0">
+                                            <img src="img/avto-logo3.png" alt="" class="mx-auto">
+                                        </span>
+                                        <span class="col-sm-8 pr-0 text-center text-sm-left">
+                                            GPS-навигаторы
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide px-2 pt-2">
+                                <div class="d-block w-100 px-2 px-md-3">
+                                    <a href="" class="link row align-items-center p-2 p-sm-3">
+                                        <span class="col-sm-3 p-0 mb-1 mb-sm-0">
+                                            <img src="img/avto-logo4.png" alt="" class="mx-auto">
+                                        </span>
+                                        <span class="col-sm-8 pr-0 text-center text-sm-left">
+                                            2GPS-навигаторы
+                                        </span>
+                                    </a>
+                                    <a href="" class="link row align-items-center p-2 p-sm-3">
+                                        <span class="col-sm-3 p-0 mb-1 mb-sm-0">
+                                            <img src="img/avto-logo1.png" alt="" class="mx-auto">
+                                        </span>
+                                        <span class="col-sm-8 pr-0 text-center text-sm-left">
+                                            GPS-навигаторы
+                                        </span>
+                                    </a>
+                                    <a href="" class="link row align-items-center p-2 p-sm-3">
+                                        <span class="col-sm-3 p-0 mb-1 mb-sm-0">
+                                            <img src="img/avto-logo2.png" alt="" class="mx-auto">
+                                        </span>
+                                        <span class="col-sm-8 pr-0 text-center text-sm-left">
+                                            GPS-навигаторы
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide px-2 pt-2">
+                                <div class="d-block w-100 px-2 px-md-3">
+                                    <a href="" class="link row align-items-center p-2 p-sm-3">
+                                        <span class="col-sm-3 p-0 mb-1 mb-sm-0">
+                                            <img src="img/avto-logo3.png" alt="" class="mx-auto">
+                                        </span>
+                                        <span class="col-sm-8 pr-0 text-center text-sm-left">
+                                            3GPS-навигаторы
+                                        </span>
+                                    </a>
+                                    <a href="" class="link row align-items-center p-2 p-sm-3">
+                                        <span class="col-sm-3 p-0 mb-1 mb-sm-0">
+                                            <img src="img/avto-logo3.png" alt="" class="mx-auto">
+                                        </span>
+                                        <span class="col-sm-8 pr-0 text-center text-sm-left">
+                                            GPS-навигаторы
+                                        </span>
+                                    </a>
+                                    <a href="" class="link row align-items-center p-2 p-sm-3">
+                                        <span class="col-sm-3 p-0 mb-1 mb-sm-0">
+                                            <img src="img/avto-logo4.png" alt="" class="mx-auto">
+                                        </span>
+                                        <span class="col-sm-8 pr-0 text-center text-sm-left">
+                                            GPS-навигаторы
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <a href="" class="btn mt-5 width-content mx-auto d-none d-lg-block">Еще категории</a> 
+            </div>
+        </section>
+        <!-- секция -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center pb-3">
+                    Новые объявления
+                </h2>
+                <div class="slider-card pt-5 pt-sm-0 mt-sm-5">
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next slider-product-card_next"></div>
+                    <!-- Swiper -->
+                    <div class="slider-product-card swiper-container" data-mobile="false">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card card-product hover-shadow mx-1 mx-xl-2">
+                                    <a href="" class="product-img hover-scale-img">
+                                        <img src="img/no-img.jpg" class="card-img-top" alt="">
+                                    </a>
+                                    <div class="card-body">
+                                        <a href="">
+                                            <h5 class="text-blue my-1">АКПП Peugeot 308 1.6л. THP 20GA03</h5>
+                                        </a>
+                                        <span class="fw-7 ttu f-20 mb-2">20 542 <b>₽</b></span>
+                                        <div class="d-sm-flex mb-2">
+                                            <p class="mr-2 mr-lg-3 text-dgray my-0">Москва</p>
+                                            <p class="text-dgray my-0">28 января</p>
+                                        </div>
+                                        <div class="d-sm-flex mb-2">
+                                            <p class="ttu mr-2 mr-lg-3 text-lgray my-0">Allparts.club</p>
+                                            <p class="text-lgray my-0">Другое</p>
+                                        </div>
+                                        <a href="" class="heart-link d-flex align-items-center border mt-2 mt-md-3">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" class="bi bi-heart mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                            </svg>
+                                            В избранное
+                                        </a>
+                                    </div>
+                                </div>1
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card-product hover-shadow mx-1 mx-xl-2">
+                                    <a href="" class="product-img hover-scale-img">
+                                        <img src="img/no-img.jpg" class="card-img-top" alt="">
+                                    </a>
+                                    <div class="card-body">
+                                        <a href="">
+                                            <h5 class="text-blue my-1">АКПП Peugeot 308 1.6л. THP 20GA03</h5>
+                                        </a>
+                                        <span class="fw-7 ttu f-20 mb-2">20 542 <b>₽</b></span>
+                                        <div class="d-sm-flex mb-2">
+                                            <p class="mr-2 mr-lg-3 text-dgray my-0">Москва</p>
+                                            <p class="text-dgray my-0">28 января</p>
+                                        </div>
+                                        <div class="d-sm-flex mb-2">
+                                            <p class="ttu mr-2 mr-lg-3 text-lgray my-0">Allparts.club</p>
+                                            <p class="text-lgray my-0">Другое</p>
+                                        </div>
+                                        <a href="" class="heart-link d-flex align-items-center border mt-2 mt-md-3">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" class="bi bi-heart mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                            </svg>
+                                            В избранное
+                                        </a>
+                                    </div>
+                                </div>2
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card-product hover-shadow mx-1 mx-xl-2">
+                                    <a href="" class="product-img hover-scale-img">
+                                        <img src="img/no-img.jpg" class="card-img-top" alt="">
+                                    </a>
+                                    <div class="card-body">
+                                        <a href="">
+                                            <h5 class="text-blue my-1">АКПП Peugeot 308 1.6л. THP 20GA03</h5>
+                                        </a>
+                                        <span class="fw-7 ttu f-20 mb-2">20 542 <b>₽</b></span>
+                                        <div class="d-sm-flex mb-2">
+                                            <p class="mr-2 mr-lg-3 text-dgray my-0">Москва</p>
+                                            <p class="text-dgray my-0">28 января</p>
+                                        </div>
+                                        <div class="d-sm-flex mb-2">
+                                            <p class="ttu mr-2 mr-lg-3 text-lgray my-0">Allparts.club</p>
+                                            <p class="text-lgray my-0">Другое</p>
+                                        </div>
+                                        <a href="" class="heart-link d-flex align-items-center border mt-2 mt-md-3">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" class="bi bi-heart mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                            </svg>
+                                            В избранное
+                                        </a>
+                                    </div>
+                                </div>3
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card-product hover-shadow mx-1 mx-xl-2">
+                                    <a href="" class="product-img hover-scale-img">
+                                        <img src="img/no-img.jpg" class="card-img-top" alt="">
+                                    </a>
+                                    <div class="card-body">
+                                        <a href="">
+                                            <h5 class="text-blue my-1">АКПП Peugeot 308 1.6л. THP 20GA03</h5>
+                                        </a>
+                                        <span class="fw-7 ttu f-20 mb-2">20 542 <b>₽</b></span>
+                                        <div class="d-sm-flex mb-2">
+                                            <p class="mr-2 mr-lg-3 text-dgray my-0">Москва</p>
+                                            <p class="text-dgray my-0">28 января</p>
+                                        </div>
+                                        <div class="d-sm-flex mb-2">
+                                            <p class="ttu mr-2 mr-lg-3 text-lgray my-0">Allparts.club</p>
+                                            <p class="text-lgray my-0">Другое</p>
+                                        </div>
+                                        <a href="" class="heart-link d-flex align-items-center border mt-2 mt-md-3">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" class="bi bi-heart mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                            </svg>
+                                            В избранное
+                                        </a>
+                                    </div>
+                                </div>4
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card-product hover-shadow mx-1 mx-xl-2">
+                                    <a href="" class="product-img hover-scale-img">
+                                        <img src="img/no-img.jpg" class="card-img-top" alt="">
+                                    </a>
+                                    <div class="card-body">
+                                        <a href="">
+                                            <h5 class="text-blue my-1">АКПП Peugeot 308 1.6л. THP 20GA03</h5>
+                                        </a>
+                                        <span class="fw-7 ttu f-20 mb-2">20 542 <b>₽</b></span>
+                                        <div class="d-sm-flex mb-2">
+                                            <p class="mr-2 mr-lg-3 text-dgray my-0">Москва</p>
+                                            <p class="text-dgray my-0">28 января</p>
+                                        </div>
+                                        <div class="d-sm-flex mb-2">
+                                            <p class="ttu mr-2 mr-lg-3 text-lgray my-0">Allparts.club</p>
+                                            <p class="text-lgray my-0">Другое</p>
+                                        </div>
+                                        <a href="" class="heart-link d-flex align-items-center border mt-2 mt-md-3">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" class="bi bi-heart mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                            </svg>
+                                            В избранное
+                                        </a>
+                                    </div>
+                                </div>5
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card-product hover-shadow mx-1 mx-xl-2">
+                                    <a href="" class="product-img hover-scale-img">
+                                        <img src="img/no-img.jpg" class="card-img-top" alt="">
+                                    </a>
+                                    <div class="card-body">
+                                        <a href="">
+                                            <h5 class="text-blue my-1">АКПП Peugeot 308 1.6л. THP 20GA03</h5>
+                                        </a>
+                                        <span class="fw-7 ttu f-20 mb-2">20 542 <b>₽</b></span>
+                                        <div class="d-sm-flex mb-2">
+                                            <p class="mr-2 mr-lg-3 text-dgray my-0">Москва</p>
+                                            <p class="text-dgray my-0">28 января</p>
+                                        </div>
+                                        <div class="d-sm-flex mb-2">
+                                            <p class="ttu mr-2 mr-lg-3 text-lgray my-0">Allparts.club</p>
+                                            <p class="text-lgray my-0">Другое</p>
+                                        </div>
+                                        <a href="" class="heart-link d-flex align-items-center border mt-2 mt-md-3">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" class="bi bi-heart mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                            </svg>
+                                            В избранное
+                                        </a>
+                                    </div>
+                                </div>6
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card-product hover-shadow mx-1 mx-xl-2">
+                                    <a href="" class="product-img hover-scale-img">
+                                        <img src="img/no-img.jpg" class="card-img-top" alt="">
+                                    </a>
+                                    <div class="card-body">
+                                        <a href="">
+                                            <h5 class="text-blue my-1">АКПП Peugeot 308 1.6л. THP 20GA03</h5>
+                                        </a>
+                                        <span class="fw-7 ttu f-20 mb-2">20 542 <b>₽</b></span>
+                                        <div class="d-sm-flex  mb-2">
+                                            <p class="mr-2 mr-lg-3 text-dgray my-0">Москва</p>
+                                            <p class="text-dgray my-0">28 января</p>
+                                        </div>
+                                        <div class="d-sm-flex mb-2">
+                                            <p class="ttu mr-2 mr-lg-3 text-lgray my-0">Allparts.club</p>
+                                            <p class="text-lgray my-0">Другое</p>
+                                        </div>
+                                        <a href="" class="heart-link d-flex align-items-center border mt-2 mt-md-3">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" class="bi bi-heart mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                            </svg>
+                                            В избранное
+                                        </a>
+                                    </div>
+                                </div>7
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-prev slider-product-card_prev"></div>
+                </div>
+                <a href="" class="btn my-4 width-content mx-auto">Больше объявлений</a>
+            </div>
+        </section>
+        <!-- секция -->
+        <section class="py-5 bg-lblue">
+            <div class="container">
+                <h2 class="text-center pb-3">
+                    Получайте клиентов
+                </h2>
+                <div class="row pt-5">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="img-circle mb-2 mx-auto">
+                            <img src="img/client1.png" alt="">
+                        </div>
+                        <p class="px-lg-4 text-center">1. Продайте запчасти для автомобилей, мотоциклов или спецтехники, используя возможности BigSmallCar.</p>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="img-circle mb-2 mx-auto">
+                            <img src="img/client2.png" alt="">
+                        </div>
+                        <p class="px-lg-4 text-center">2. Экономьте на создании сайта - есть инструменты для продвижения.</p>
+                    </div>
+                    <div class="col-sm-6 col-md-4 mx-auto">
+                        <div class="img-circle mb-2 mx-auto">
+                            <img src="img/client3.png" alt="">
+                        </div>
+                        <p class="px-lg-4 text-center">3. Следите за статистикой своего магазина на BigSmallCar.</p>
+                    </div>
+                </div>
+                <a href="" class="btn mt-5 width-content mx-auto">Добавить магазин</a>
+            </div>
+        </section>
+        <!-- секция -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center pb-3">
+                    Новые магазины
+                </h2>
+                <div class="slider-card pt-5 pt-sm-0 mt-sm-5">
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next slider-shop-card_next"></div>
+                    <!-- Swiper -->
+                    <div class="slider-shop-card swiper-container" data-mobile="false">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card hover-shadow mx-1 mx-xl-2">
+                                    <a href="" class="product-img hover-scale-img">
+                                        <img src="img/shop-logo1.png" class="card-img-top" alt="">
+                                    </a>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <a href="" class="d-flex align-items-center f-14 text-dgray">
+                                                <svg width="14" height="14" viewBox="0 0 16 16" class="bi bi-star-fill mr-2" fill="#006fad" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                                </svg>
+                                                Рейтинг
+                                            </a>
+                                            <a href="" class="d-flex align-items-center f-14 text-dgray">
+                                                <svg width="14" height="14" viewBox="0 0 16 16" class="bi bi-chat-fill mr-2" fill="#006fad" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z"/>
+                                                </svg>
+                                                Отзывы
+                                            </a>
+                                        </div>
+                                        <a href="">
+                                            <h3 class="fw-7 ttu my-1">Allparts.club</h3>
+                                        </a>
+                                        <a href="" class="text-blue fw-7 mb-3">21 542 объявлений</a>
+                                        <p class="text-dgray my-1">Автозапчасти для иномарок</p>
+                                        <a href="" class="ttu text-lgray my-1">Allparts.club</a>
+                                        <p class="text-dgray my-1">550 тыс. наименований.</p>
+                                        <p class="text-dgray my-1">Доставка по всей России.</p>
+                                        <a href="https://yandex.ru/maps/213/moscow/?ll=37.622504%2C55.753215&z=10" class="text-blue fw-6" target="_blank">Москва</a>
+                                        <a href="" class="heart-link d-flex align-items-center border mt-2 mt-md-3">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" class="bi bi-heart mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                            </svg>
+                                            В избранное
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card hover-shadow mx-1 mx-xl-2">
+                                    <a href="" class="product-img hover-scale-img">
+                                        <img src="img/shop-logo1.png" class="card-img-top" alt="">
+                                    </a>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <a href="" class="d-flex align-items-center f-14 text-dgray">
+                                                <svg width="14" height="14" viewBox="0 0 16 16" class="bi bi-star-fill mr-2" fill="#006fad" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                                </svg>
+                                                Рейтинг
+                                            </a>
+                                            <a href="" class="d-flex align-items-center f-14 text-dgray">
+                                                <svg width="14" height="14" viewBox="0 0 16 16" class="bi bi-chat-fill mr-2" fill="#006fad" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z"/>
+                                                </svg>
+                                                Отзывы
+                                            </a>
+                                        </div>
+                                        <a href="">
+                                            <h3 class="fw-7 ttu my-1">Allparts.club</h3>
+                                        </a>
+                                        <a href="" class="text-blue fw-7 mb-3">21 542 объявлений</a>
+                                        <p class="text-dgray my-1">Автозапчасти для иномарок</p>
+                                        <a href="" class="ttu text-lgray my-1">Allparts.club</a>
+                                        <p class="text-dgray my-1">550 тыс. наименований.</p>
+                                        <p class="text-dgray my-1">Доставка по всей России.</p>
+                                        <a href="https://yandex.ru/maps/213/moscow/?ll=37.622504%2C55.753215&z=10" class="text-blue fw-6" target="_blank">Москва</a>
+                                        <a href="" class="heart-link d-flex align-items-center border mt-2 mt-md-3">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" class="bi bi-heart mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                            </svg>
+                                            В избранное
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card hover-shadow mx-1 mx-xl-2">
+                                    <a href="" class="product-img hover-scale-img">
+                                        <img src="img/shop-logo1.png" class="card-img-top" alt="">
+                                    </a>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <a href="" class="d-flex align-items-center f-14 text-dgray">
+                                                <svg width="14" height="14" viewBox="0 0 16 16" class="bi bi-star-fill mr-2" fill="#006fad" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                                </svg>
+                                                Рейтинг
+                                            </a>
+                                            <a href="" class="d-flex align-items-center f-14 text-dgray">
+                                                <svg width="14" height="14" viewBox="0 0 16 16" class="bi bi-chat-fill mr-2" fill="#006fad" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z"/>
+                                                </svg>
+                                                Отзывы
+                                            </a>
+                                        </div>
+                                        <a href="">
+                                            <h3 class="fw-7 ttu my-1">Allparts.club</h3>
+                                        </a>
+                                        <a href="" class="text-blue fw-7 mb-3">21 542 объявлений</a>
+                                        <p class="text-dgray my-1">Автозапчасти для иномарок</p>
+                                        <a href="" class="ttu text-lgray my-1">Allparts.club</a>
+                                        <p class="text-dgray my-1">550 тыс. наименований.</p>
+                                        <p class="text-dgray my-1">Доставка по всей России.</p>
+                                        <a href="https://yandex.ru/maps/213/moscow/?ll=37.622504%2C55.753215&z=10" class="text-blue fw-6" target="_blank">Москва</a>
+                                        <a href="" class="heart-link d-flex align-items-center border mt-2 mt-md-3">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" class="bi bi-heart mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                            </svg>
+                                            В избранное
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card hover-shadow mx-1 mx-xl-2">
+                                    <a href="" class="product-img hover-scale-img">
+                                        <img src="img/shop-logo1.png" class="card-img-top" alt="">
+                                    </a>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <a href="" class="d-flex align-items-center f-14 text-dgray">
+                                                <svg width="14" height="14" viewBox="0 0 16 16" class="bi bi-star-fill mr-2" fill="#006fad" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                                </svg>
+                                                Рейтинг
+                                            </a>
+                                            <a href="" class="d-flex align-items-center f-14 text-dgray">
+                                                <svg width="14" height="14" viewBox="0 0 16 16" class="bi bi-chat-fill mr-2" fill="#006fad" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z"/>
+                                                </svg>
+                                                Отзывы
+                                            </a>
+                                        </div>
+                                        <a href="">
+                                            <h3 class="fw-7 ttu my-1">Allparts.club</h3>
+                                        </a>
+                                        <a href="" class="text-blue fw-7 mb-3">21 542 объявлений</a>
+                                        <p class="text-dgray my-1">Автозапчасти для иномарок</p>
+                                        <a href="" class="ttu text-lgray my-1">Allparts.club</a>
+                                        <p class="text-dgray my-1">550 тыс. наименований.</p>
+                                        <p class="text-dgray my-1">Доставка по всей России.</p>
+                                        <a href="https://yandex.ru/maps/213/moscow/?ll=37.622504%2C55.753215&z=10" class="text-blue fw-6" target="_blank">Москва</a>
+                                        <a href="" class="heart-link d-flex align-items-center border mt-2 mt-md-3">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" class="bi bi-heart mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                            </svg>
+                                            В избранное
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card hover-shadow mx-1 mx-xl-2">
+                                    <a href="" class="product-img hover-scale-img">
+                                        <img src="img/shop-logo1.png" class="card-img-top" alt="">
+                                    </a>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <a href="" class="d-flex align-items-center f-14 text-dgray">
+                                                <svg width="14" height="14" viewBox="0 0 16 16" class="bi bi-star-fill mr-2" fill="#006fad" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                                </svg>
+                                                Рейтинг
+                                            </a>
+                                            <a href="" class="d-flex align-items-center f-14 text-dgray">
+                                                <svg width="14" height="14" viewBox="0 0 16 16" class="bi bi-chat-fill mr-2" fill="#006fad" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z"/>
+                                                </svg>
+                                                Отзывы
+                                            </a>
+                                        </div>
+                                        <a href="">
+                                            <h3 class="fw-7 ttu my-1">Allparts.club</h3>
+                                        </a>
+                                        <a href="" class="text-blue fw-7 mb-3">21 542 объявлений</a>
+                                        <p class="text-dgray my-1">Автозапчасти для иномарок</p>
+                                        <a href="" class="ttu text-lgray my-1">Allparts.club</a>
+                                        <p class="text-dgray my-1">550 тыс. наименований.</p>
+                                        <p class="text-dgray my-1">Доставка по всей России.</p>
+                                        <a href="https://yandex.ru/maps/213/moscow/?ll=37.622504%2C55.753215&z=10" class="text-blue fw-6" target="_blank">Москва</a>
+                                        <a href="" class="heart-link d-flex align-items-center border mt-2 mt-md-3">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" class="bi bi-heart mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                            </svg>
+                                            В избранное
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card hover-shadow mx-1 mx-xl-2">
+                                    <a href="" class="product-img hover-scale-img">
+                                        <img src="img/shop-logo1.png" class="card-img-top" alt="">
+                                    </a>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <a href="" class="d-flex align-items-center f-14 text-dgray">
+                                                <svg width="14" height="14" viewBox="0 0 16 16" class="bi bi-star-fill mr-2" fill="#006fad" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                                </svg>
+                                                Рейтинг
+                                            </a>
+                                            <a href="" class="d-flex align-items-center f-14 text-dgray">
+                                                <svg width="14" height="14" viewBox="0 0 16 16" class="bi bi-chat-fill mr-2" fill="#006fad" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z"/>
+                                                </svg>
+                                                Отзывы
+                                            </a>
+                                        </div>
+                                        <a href="">
+                                            <h3 class="fw-7 ttu my-1">Allparts.club</h3>
+                                        </a>
+                                        <a href="" class="text-blue fw-7 mb-3">21 542 объявлений</a>
+                                        <p class="text-dgray my-1">Автозапчасти для иномарок</p>
+                                        <a href="" class="ttu text-lgray my-1">Allparts.club</a>
+                                        <p class="text-dgray my-1">550 тыс. наименований.</p>
+                                        <p class="text-dgray my-1">Доставка по всей России.</p>
+                                        <a href="https://yandex.ru/maps/213/moscow/?ll=37.622504%2C55.753215&z=10" class="text-blue fw-6" target="_blank">Москва</a>
+                                        <a href="" class="heart-link d-flex align-items-center border mt-2 mt-md-3">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" class="bi bi-heart mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                            </svg>
+                                            В избранное
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-prev slider-shop-card_prev"></div>
+                </div>
+            </div>
+        </section>
+        <!-- секция -->
+        <section class="py-5 bg-lgray">
+            <div class="container">
+                <h2 class="text-center pb-3">
+                    Выберите свой город
+                </h2>
+                <div class="row pt-3 pt-sm-5">
+                    <div class="col-6 col-md-3 mb-4">
+                        <h5 class="mb-2 mb-md-4">Республика Башкортостан</h5>
+                        <ul>
+                            <li>
+                                <a href="">Агидель</a>
+                            </li>
+                            <li>
+                                <a href="">Баймак</a>
+                            </li>
+                            <li>
+                                <a href="">Белебей</a>
+                            </li>
+                            <li>
+                                <a href="">Белорецк</a>
+                            </li>
+                            <li>
+                                <a href="" class="tdu open-link">Показать еще</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-3 mb-4">
+                        <h5 class="mb-2 mb-md-4">Республика Башкортостан</h5>
+                        <ul>
+                            <li>
+                                <a href="">Агидель</a>
+                            </li>
+                            <li>
+                                <a href="">Баймак</a>
+                            </li>
+                            <li>
+                                <a href="">Белебей</a>
+                            </li>
+                            <li>
+                                <a href="">Белорецк</a>
+                            </li>
+                            <li>
+                                <a href="" class="tdu open-link">Показать еще</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-3 mb-4">
+                        <h5 class="mb-2 mb-md-4">Республика Башкортостан</h5>
+                        <ul>
+                            <li>
+                                <a href="">Агидель</a>
+                            </li>
+                            <li>
+                                <a href="">Баймак</a>
+                            </li>
+                            <li>
+                                <a href="">Белебей</a>
+                            </li>
+                            <li>
+                                <a href="">Белорецк</a>
+                            </li>
+                            <li>
+                                <a href="" class="tdu open-link">Показать еще</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-3 mb-4">
+                        <h5 class="mb-2 mb-md-4">Республика Башкортостан</h5>
+                        <ul>
+                            <li>
+                                <a href="">Агидель</a>
+                            </li>
+                            <li>
+                                <a href="">Баймак</a>
+                            </li>
+                            <li>
+                                <a href="">Белебей</a>
+                            </li>
+                            <li>
+                                <a href="">Белорецк</a>
+                            </li>
+                            <li>
+                                <a href="" class="tdu open-link">Показать еще</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="" class="btn mt-5 width-content mx-auto">Весь список городов </a>
+            </div>
+        </section>
+        <!-- footer -->
+        <footer class="footer bg-black text-white py-4">
+            <div class="container">
+                <div class="row mb-4">
+                    <div class="col-md-5 col-lg-3">
+                        <a href="" class="logo"><img src="img/logo.png" alt=""></a>
+                        <p>
+                            Интернет сайт для размещения объявлений о товарах и услугах от компаний и индивидуальных предпринимателей, занимающихся продажей запчастей для автомобилей, мотоциклов и спец техники.
+                        </p>
+                    </div>
+                    <div class="col-auto col-sm-6 col-md-3 col-lg-4 offset-lg-1">
+                        <p class="ttu fw-demi mb-3">Информация</p>
+                        <ul class="menu">
+                            <li><a href="">О нас</a></li>
+                            <li><a href="">Каталог автозапчастей</a></li>
+                            <li><a href="">Магазины</a></li>
+                            <li><a href="">Помощь</a></li>
+                            <li><a href="">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-auto col-sm-6 col-md-3 col-lg-4">
+                        <p class="ttu fw-demi mb-3">Контакты</p>
+                        <a href="tel:+79054740521" class="text-white mb-1">+7(905) 47-40-521</a>
+                        <a href="mailto:support@bigsmallcar.com" class="text-white mb-1">support@bigsmallcar.com</a>
+                        <div class="network mt-4">
+                            <p class="ttu fw-demi mb-2">Мы в соц. Сетях</p>
+                            <div class="d-flex mt-2">
+                                <a href="" class="mr-3 hover-scale"><img src="img/vk-social-network-logo.svg" alt=""></a>
+                                <a href="" class="mr-3 hover-scale"><img src="img/facebook-logo.svg" alt=""></a>
+                                <a href="" class="mr-3 hover-scale"><img src="img/instagram.svg" alt=""></a>
+                                <a href="" class="mr-3 hover-scale"><img src="img/whatsapp.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="opacity-1">
+                <div class="row align-items-center">
+                    <div class="col-md-4">
+                        <p>© 2020 BigSmallCar</p>
+                    </div>
+                    <div class="col-md-4 mb-2 mb-md-0">
+                        <a href="" class="tdu text-lgray">Политика конфиденциальности</a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="" class="tdu text-lgray">Пользовательское соглашение</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <!-- swiper js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- main js -->
+    <script src="js/main.js"></script>
+</body>
+</html>

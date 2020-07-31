@@ -1,0 +1,7 @@
+/*FONT-FACE AvenirNextCyr*/
+/*font-family: 'AvenirNextCyr Demi', sans-serif;
+font-family: 'AvenirNextCyr 300', sans-serif; 
+font-family: 'AvenirNextCyr 400', sans-serif;
+font-family: 'AvenirNextCyr 600', sans-serif;
+font-family: 'AvenirNextCyr 700', sans-serif;*/
+@font-face{font-family:'AvenirNextCyr Demi';src:url('../fonts/AvenirNextCyr-Demi.woff2') format('woff2'),url('../fonts/AvenirNextCyr-Demi.woff') format('woff'),url('../fonts/AvenirNextCyr-Demi.ttf') format('truetype')}@font-face{font-family:'AvenirNextCyr 300';src:url('../fonts/AvenirNextCyr-Light.woff2') format('woff2'),url('../fonts/AvenirNextCyr-Light.woff') format('woff'),url('../fonts/AvenirNextCyr-Light.ttf') format('truetype')}@font-face{font-family:'AvenirNextCyr 400';src:url('../fonts/AvenirNextCyr-Regular.woff2') format('woff2'),url('../fonts/AvenirNextCyr-Regular.woff') format('woff'),url('../fonts/AvenirNextCyr-Regular.ttf') format('truetype')}@font-face{font-family:'AvenirNextCyr 600';src:url('../fonts/AvenirNextCyr-Medium.woff2') format('woff2'),url('../fonts/AvenirNextCyr-Medium.woff') format('woff'),url('../fonts/AvenirNextCyr-Medium.ttf') format('truetype')}@font-face{font-family:'AvenirNextCyr 700';src:url('../fonts/AvenirNextCyr-Bold.woff2') format('woff2'),url('../fonts/AvenirNextCyr-Bold.woff') format('woff'),url('../fonts/AvenirNextCyr-Bold.ttf') format('truetype')}
