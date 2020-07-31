@@ -187,13 +187,15 @@ window.addEventListener('DOMContentLoaded', () => {
   	  linkList = document.querySelector('.menu-category__drop');
 
   // по клику показать, разворачиваем список
+  // по клику показать, разворачиваем список
   linkOpen.addEventListener('click', (e) => { //(e) если есть href#
       if (e.target) {
           e.preventDefault();
           e.stopPropagation();
       }
+      linkOpen.innerText = linkList.classList.contains('open') ? 'Показать больше категорий' : 'Скрыть';
+
       linkList.classList.toggle('open');
-      linkOpen.innerText = 'Скрыть';
   });
 
 });
