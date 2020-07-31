@@ -1,5 +1,5 @@
 /*обнуление стандартных стилей*/
-body{font-family:'AvenirNextCyr 400',sans-serif;margin:0;padding:0;overflow-x:hidden;max-width:100%;min-width:320px;color:#1b1b1b;font-size:16px}li,ol,ul{list-style:none;display:block;margin:0;padding:0}img{max-width:100%;display:block}a{color:#1b1b1b;text-decoration:none;display:block}a:hover{color:#1b1b1b;text-decoration:none}a,div,input,p,select,span{transition:.4s;box-sizing:border-box}input::placeholder{font-size:14px;font-family:'AvenirNextCyr 400',sans-serif!important}input:focus{outline:0}
+body{font-family:'AvenirNextCyr 400',sans-serif;margin:0;padding:0;overflow-x:hidden;max-width:100%;min-width:320px;color:#1b1b1b;font-size:16px}li,ol,ul{list-style:none;display:block;margin:0;padding:0}img{max-width:100%;display:block}a{color:#1b1b1b;text-decoration:none;display:block}a:hover{color:#1b1b1b;text-decoration:none}a,div,input,p,select,span,img{transition:.4s;box-sizing:border-box}input::placeholder{font-size:14px;font-family:'AvenirNextCyr 400',sans-serif!important}input:focus{outline:0}
 /*обнуление стандартных стилей*/
 
 .ttu {
