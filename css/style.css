@@ -114,11 +114,19 @@ h6, .h6 {
 	background: linear-gradient(180deg, rgba(0,143,224,1) 0%, rgba(0,112,177,1) 100%);
 	cursor: pointer;
 }
+.btn:hover {
+	color: #fff;
+	background: linear-gradient(180deg, rgb(5 165 255) 20%, rgb(4 108 169) 80%);
+	box-shadow: 0 8px 20px rgb(0 136 213 / 45%);
+}
 .btn-transp {
 	color: #006fad;
 	border: 1px solid #006fad;
 	background: transparent;
 	box-shadow: 0 4px 10px rgb(0 136 213 / 20%)
+}
+.btn-transp:hover {
+	background: linear-gradient(180deg, rgb(5 165 255) 20%, rgb(4 108 169) 80%); 
 }
 .dropdown-toggle::after {
     border-top: .3em solid transparent;
