@@ -183,6 +183,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+  
 
   // показать или скрыть ссылки в категориях
   let linkOpen = document.querySelector('.link-open'),
@@ -197,5 +198,6 @@ window.addEventListener('DOMContentLoaded', () => {
       linkList.classList.toggle('open');
       linkOpen.innerText = 'Скрыть';
   });
+
 
 });
