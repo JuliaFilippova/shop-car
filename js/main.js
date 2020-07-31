@@ -26,6 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
       title: true,
       speed: 900,
   });
+
   window.onload = function () {
     // swiper
     let swiperBanner = new Swiper('.slider-banner', {
@@ -40,7 +41,7 @@ window.addEventListener('DOMContentLoaded', () => {
       },  
     });
 
-    // ------------------------------------------
+    // swiperShopLink
 
     let swiperShopLink = new Swiper('.slider-shop-link', {
       slidesPerView: 6,
@@ -72,7 +73,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-  // ------------------------------------------
+  // sliderCategory
 
     const sliderCategory = document.querySelector('.slider-category-link');
 
@@ -91,7 +92,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
             sliderCategory.dataset.mobile = 'true';
         }
-
         if (window.innerWidth > 991) {
             sliderCategory.dataset.mobile = 'false';
             if (sliderCategory.classList.contains('swiper-container-initialized')) {
@@ -110,8 +110,7 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ------------------------------------------
-
+    // swiperProduct
     let swiperProduct = new Swiper('.slider-product-card', {
         slidesPerView: 4,
         slidesPerGroup: 1,
@@ -134,8 +133,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ------------------------------------------
-
+    // swiperShopCard
     let swiperShopCard = new Swiper('.slider-shop-card', {
         slidesPerView: 3,
         slidesPerGroup: 1,
@@ -163,7 +161,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // -------------------
+    // galleryThumbs
     let galleryThumbs = new Swiper('.gallery-thumbs', {
       spaceBetween: 10,
       slidesPerView: 4,
@@ -183,7 +181,6 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-  
 
   // показать или скрыть ссылки в категориях
   let linkOpen = document.querySelector('.link-open'),
@@ -198,6 +195,5 @@ window.addEventListener('DOMContentLoaded', () => {
       linkList.classList.toggle('open');
       linkOpen.innerText = 'Скрыть';
   });
-
 
 });

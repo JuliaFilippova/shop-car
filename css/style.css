@@ -50,66 +50,51 @@ h6, .h6 {
 .fw-3  {
     font-family:  'AvenirNextCyr 300',  sans-serif!important;
 }
-
 .fw-4  {
     font-family:  'AvenirNextCyr 400',  sans-serif!important;
 }
-
 .fw-6  {
     font-family:  'AvenirNextCyr 600',  sans-serif!important;
 }
-
 .fw-7  {
     font-family:  'AvenirNextCyr 700',  sans-serif!important;
 }
-
 .fw-demi  {
     font-family:  'AvenirNextCyr Demi',  sans-serif;
 }
-
 .width-content  {
     width:  max-content;
 }
 .ls {
     letter-spacing: .05em;
 }
-
 .text-blue {
     color: #006fad!important;
 }
-
 .text-dgray {
     color: #616161!important;
 }
-
 .text-lgray {
     color: #9e9c9c!important;
 }
-
 .bg-lgray {
     background: #f8f8f8!important;
 }
-
 .bg-blue {
     background: #006fad!important;
 }
-
 .bg-lblue {
     background: #ecf8ff!important;
 }
-
 .bg-black {
     background: #212121!important;
 }
-
 .box-shadow {
     box-shadow: 0 4px 6px rgba(0, 0, 0, .06);
 }
-
 .opacity-1 {
     opacity:  .5;
 }
-
 .border-radius {
     border-radius: 10px;
 }
@@ -192,11 +177,6 @@ h6, .h6 {
 }
 
 /*header*/
-/*.header img {
-	object-fit: contain;
-    width: 100%;
-	max-height: 410px;
-}*/
 .header-banner {
 	height: 425px;
 	border-radius: 20px;
@@ -491,6 +471,7 @@ h6, .h6 {
 		padding: 15px 19px;
     	font-size: 15px;
 	}
+
 	/*banner*/
 	.slider-banner .swiper-pagination-bullet {
 	    width: 8px;
@@ -510,6 +491,7 @@ h6, .h6 {
 	h1, .h1 {
 	    font-size: 18px;
 	}
+
 	/*slider card*/
 	.slider-shop-card .card-body h3 {
 		font-size: 20px;
@@ -537,6 +519,7 @@ h6, .h6 {
 		align-items: center;
 		text-align: center;
 	}
+
 	/*breadcrumb*/
 	.breadcrumb-item a {
 		display: none;
@@ -557,6 +540,7 @@ h6, .h6 {
 	.breadcrumb-item+.breadcrumb-item {
 	    padding-left: .2rem;
 	}
+	
 	/*pagination*/
 	.page-item:first-child,
 	.page-item:last-child {
