@@ -1,4 +1,31 @@
 window.addEventListener('DOMContentLoaded', () => {
+  // hamburger menu
+  function burgerMenu(selector) {
+      var menu = document.querySelector(selector),
+          buttonMenu = document.querySelector('.burger-menu__btn');
+
+      buttonMenu.addEventListener('click', (e) => {
+          if (e.target) {
+              e.preventDefault();
+          }
+          menu.classList.toggle('active');
+          document.body.classList.toggle('overflow-hidden');
+      });
+
+      document.querySelector('.menu-mobile').onclick = (e) => {
+          if (e.target.classList.contains('menu-mobile')) {
+              menu.classList.remove('active');
+              document.body.classList.remove('overflow-hidden');
+          }
+      }
+  }
+  burgerMenu('.burger-menu');
+
+  // menu mobile
+  let slinky = $('.js-menu').slinky({
+      title: true,
+      speed: 900,
+  });
   window.onload = function () {
     // swiper
     let swiperBanner = new Swiper('.slider-banner', {
@@ -159,15 +186,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // показать или скрыть ссылки в категориях
   let linkOpen = document.querySelector('.link-open'),
-  	linkList = document.querySelector('.menu-category__drop');
+  	  linkList = document.querySelector('.menu-category__drop');
 
   // по клику показать, разворачиваем список
   linkOpen.addEventListener('click', (e) => { //(e) если есть href#
       if (e.target) {
           e.preventDefault();
+          e.stopPropagation();
       }
-
       linkList.classList.toggle('open');
       linkOpen.innerText = 'Скрыть';
   });
+
 });
