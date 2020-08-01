@@ -1,7 +1,10 @@
 .nav-menu li a {
 	margin-right: 50px;
 }
-
+.menu-category > li > a:hover,
+.nav-menu li a:hover {
+	color: #006fad;
+}
 /*menu-list-category*/
 .menu-category__drop {
 	width: 260px;
@@ -9,6 +12,9 @@
 }
 .menu-category__drop li a {
 	padding: 6.9px 0;
+}
+.menu-category__drop li a:hover {
+	color: #006fad;
 }
 
 /*search*/

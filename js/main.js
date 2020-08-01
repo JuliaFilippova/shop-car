@@ -42,7 +42,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     // swiperShopLink
-
     let swiperShopLink = new Swiper('.slider-shop-link', {
       slidesPerView: 6,
         spaceBetween: 10,
@@ -74,7 +73,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
   // sliderCategory
-
     const sliderCategory = document.querySelector('.slider-category-link');
 
     let mySwiper;
@@ -102,7 +100,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // запускаем слайдер если он есть на странице
     if (sliderCategory) {
-        console.log('есть на странице');
         mobileSlider();
 
         window.addEventListener('resize', () => {
@@ -145,7 +142,8 @@ window.addEventListener('DOMContentLoaded', () => {
         // Responsive breakpoints
         breakpoints: {
             0: {
-              slidesPerView: 1.3
+              slidesPerView: 1.3,
+              spaceBetween: 8
             },
             390: {
               slidesPerView: 2,
@@ -187,14 +185,12 @@ window.addEventListener('DOMContentLoaded', () => {
   	  linkList = document.querySelector('.menu-category__drop');
 
   // по клику показать, разворачиваем список
-  // по клику показать, разворачиваем список
   linkOpen.addEventListener('click', (e) => { //(e) если есть href#
       if (e.target) {
           e.preventDefault();
           e.stopPropagation();
       }
       linkOpen.innerText = linkList.classList.contains('open') ? 'Показать больше категорий' : 'Скрыть';
-
       linkList.classList.toggle('open');
   });
 

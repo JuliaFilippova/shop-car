@@ -1,6 +1,12 @@
 .swiper-button-next:focus, .swiper-button-prev:focus {
 	outline: none;
 }
+.swiper-button-next, .swiper-button-prev {
+    z-index: 5;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    transform: scale(1.2);
+}
 .slider-card {
 	position: relative;
 }
@@ -17,7 +23,7 @@
     top: 45%;
 }
 .slider-card .swiper-wrapper {
-	padding-bottom: 2.5rem !important;
+	padding-bottom: 1.5rem !important;
 }
 /*slider banner*/
 .slider-banner .swiper-pagination {
@@ -63,6 +69,7 @@
 	border-radius: 20px;
 	box-shadow: 0 0px 6px rgba(0,0,0,.1);
 	position: relative;
+	margin: 0 4px;
 }
 .slider-shop-link a img {
 	max-width: 120px;
@@ -213,7 +220,6 @@
 	}
 	.slider-shop-link a {
 	    max-width: 100%;
-	    margin: 0 5px;
 	}
 
 	/*gallery-product*/
