@@ -178,6 +178,14 @@ window.addEventListener('DOMContentLoaded', () => {
         swiper: galleryThumbs
       }
     });
+
+    if (document.getElementById('lightgallery')) {
+        // лайтбокс галерея
+        lightGallery(document.getElementById('lightgallery'));
+    }
+
+    
+
   }
 
   // показать или скрыть ссылки в категориях
