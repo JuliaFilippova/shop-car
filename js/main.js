@@ -159,6 +159,16 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // swiperShopCard
+    let swiperReviewsCard = new Swiper('.slider-reviews-card', {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        navigation: {
+            nextEl: '.slider-reviews-card_next',
+            prevEl: '.slider-reviews-card_prev',
+        }
+    });
+
     // galleryThumbs
     let galleryThumbs = new Swiper('.gallery-thumbs', {
       spaceBetween: 10,

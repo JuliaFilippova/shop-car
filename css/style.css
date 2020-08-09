@@ -35,7 +35,13 @@ body{font-family:'AvenirNextCyr 400',sans-serif;margin:0;padding:0;overflow-x:hi
 .opacity-1{opacity:.5}.border-radius{border-radius:10px}
 .border-top-blue{border-top:1px solid #006fad}
 /*--specification--*/
-
+.wrap-shadow {
+	background: #fff;
+	box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.mt-minus-5 {
+	margin-top: -4rem;
+}
 .btn {
 	font-family: 'AvenirNextCyr 600', sans-serif;
 	display: block;
@@ -307,6 +313,57 @@ body{font-family:'AvenirNextCyr 400',sans-serif;margin:0;padding:0;overflow-x:hi
 .page-link.active {
 	background: #006fad;
 	color: #fff;
+}
+
+/*page-shop*/
+.page-shop-bg {
+	height: 550px;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.page-shop-name {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.page-shop-name .card-shop_logo {
+	border-radius: 50%;
+	width: 125px!important;
+	height: 125px!important;
+	object-fit: inherit;
+}
+.page-shop-name .icon-rating {
+	padding: 4px 3px;
+    background: #ff8c00;
+    border-radius: 50px;
+    display: inline-block;
+    margin-top: -35px;
+    margin-right: -85px;
+}
+.page-shop-name .icon-rating:hover {
+	box-shadow: 0 2px 13px rgb(255 152 0);
+}
+.page-shop-name .icon-rating span {
+	font-size: 12px;
+	color: #fff;
+}
+.page-shop-name h1 {
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    font-size: 2.5em;
+}
+.nav-button li {
+	margin: 0 3px;
+}
+.nav-button .icon-network {
+	padding: 2px;
+	border-radius: 50px;
+	box-shadow: 0 4px 20px rgb(0 136 213 / 40%);
+	background: linear-gradient(180deg, rgba(0,143,224,1) 0%, rgba(0,112,177,1) 100%);
+}
+.nav-button .icon-network img {
+	width: 20px;
 }
 /*---------*/
 @media(min-width: 1400px) {
