@@ -40,7 +40,7 @@ body{font-family:'AvenirNextCyr 400',sans-serif;margin:0;padding:0;overflow-x:hi
 	box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
 .mt-minus-5 {
-	margin-top: -4rem;
+	margin-top: -4.5rem;
 }
 .btn {
 	font-family: 'AvenirNextCyr 600', sans-serif;
@@ -177,6 +177,7 @@ body{font-family:'AvenirNextCyr 400',sans-serif;margin:0;padding:0;overflow-x:hi
 .card {
 	border-radius: 10px;
 	box-shadow: 0 2px 6px rgba(0,0,0,.1);
+	overflow: hidden;
 }
 .card-body {
 	padding: 15px;
@@ -354,16 +355,66 @@ body{font-family:'AvenirNextCyr 400',sans-serif;margin:0;padding:0;overflow-x:hi
     font-size: 2.5em;
 }
 .nav-button li {
-	margin: 0 3px;
+	margin: 0 3px 10px 3px;
 }
 .nav-button .icon-network {
-	padding: 2px;
+	width: 48px;
+    height: 48px;
 	border-radius: 50px;
 	box-shadow: 0 4px 20px rgb(0 136 213 / 40%);
 	background: linear-gradient(180deg, rgba(0,143,224,1) 0%, rgba(0,112,177,1) 100%);
 }
 .nav-button .icon-network img {
-	width: 20px;
+	width: 23px;
+	transform: translate(50%, 50%);
+}
+.nav-button .icon-network svg {
+	transform: translate(73%, 50%);
+}
+.shop-desc {
+	display: flex;
+	justify-content: center;
+}
+.shop-desc p {
+	padding: 20px 100px;
+	text-align: center;
+	border: 1px solid red;
+}
+/*reviews*/
+.card-reviews .card-shop_logo img {
+	border-radius: 50%;
+	width: 125px!important;
+	height: 125px!important;
+	object-fit: cover;
+	box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+.card-reviews__text {
+	display: inline-block;
+}
+.card-reviews__text .title {
+	position: relative;
+	font-family:'AvenirNextCyr 600',sans-serif!important;
+	margin-top: 15px;
+}
+.card-reviews__text .title:after,
+.card-reviews__text .title:before {
+	content: '"';
+	position: absolute;
+}
+.card-reviews__text .title:before {
+	left: -10px;
+}
+.card-reviews__text .title:after {
+	right: -9px;
+}
+.card-reviews__text .title {
+	position: relative;
+}
+.card-reviews__text p {
+	font-size: 20px;
+	font-family:'AvenirNextCyr 600',sans-serif!important;
+	width: 80%;
+	margin: 15px auto 15px;
 }
 /*---------*/
 @media(min-width: 1400px) {
@@ -396,6 +447,9 @@ body{font-family:'AvenirNextCyr 400',sans-serif;margin:0;padding:0;overflow-x:hi
 	.f-20 {
 	    font-size: 18px;
 	}
+	.mt-minus-6 {
+		margin-top: -4.3rem;
+	}
 	/*banner*/
 	.title-big {
 	    font-size: 60px;
@@ -422,12 +476,27 @@ body{font-family:'AvenirNextCyr 400',sans-serif;margin:0;padding:0;overflow-x:hi
 		height: 70px;
 	}
 	/*product card*/
-	.card-shop_logo  {
+	.card-shop .card-shop_logo  {
 		max-width: 100px;
     	height: 100%;
 	}
-	.card-shop_logo  img {
+	.card-shop .card-shop_logo  img {
 		width: 100%;
+	}
+
+	/*nav button*/
+	.nav-button .btn {
+		padding: 9px 17px;
+	}
+	.nav-button .icon-network {
+	    width: 43px;
+	    height: 43px;
+	}
+	.nav-button .icon-network img {
+	    width: 22px;
+	}
+	.nav-button .icon-network svg {
+	    transform: translate(55%, 50%);
 	}
 }
 @media(max-width: 768px) {
@@ -461,6 +530,27 @@ body{font-family:'AvenirNextCyr 400',sans-serif;margin:0;padding:0;overflow-x:hi
 	}
 	.page-item:last-child {
 		display: block;
+	}
+
+	/*page shop*/
+	.shop-desc p {
+	    padding: 20px 40px;
+	}
+
+	/*nav-button*/
+	.nav-button .btn {
+	    padding: 9px 11px;
+	    font-size: 14px;
+	}
+	.nav-button .icon-network {
+	    width: 39px;
+	    height: 39px;
+	}
+	.nav-button .icon-network img {
+	    width: 20px;
+	}
+	.nav-button .icon-network svg {
+	    transform: translate(50%, 50%);
 	}
 }
 @media(max-width: 575px) {
@@ -546,8 +636,23 @@ body{font-family:'AvenirNextCyr 400',sans-serif;margin:0;padding:0;overflow-x:hi
 	.page-item:last-child {
 	  display: none;
 	}
+	
+	/*reviews*/
+	.card-reviews__text p {
+	    font-size: 18px;
+	    width: 95%;
+	    margin: 10px auto 10px;
+	}
+
+	/*page shop*/
+	.shop-desc p {
+	    padding: 20px 20px;
+	}
 }
 @media(max-width: 420px) {
+	.h4, h4 {
+	    font-size: 20px;
+	}
 	.px-xs-1 {
 		padding: 0 .25rem;
 	}
@@ -586,7 +691,12 @@ body{font-family:'AvenirNextCyr 400',sans-serif;margin:0;padding:0;overflow-x:hi
 	.card-shop h3 {
 	    font-size: 19px;
 	}
-	.card-shop_logo {
+	.card-shop .card-shop_logo {
 	    max-width: 90px;
+	}
+
+	/*reviews*/
+	.card-reviews__text p {
+	    font-size: 15px;
 	}
 }

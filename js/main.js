@@ -107,6 +107,43 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // page shop slider category ----------
+    // sliderCategory
+    const sliderPageCategory = document.querySelector('.slider-page-category-link');
+
+    let mySliderCategory;
+
+    function mobileSliderPage() {
+        if (window.innerWidth <= 991 && sliderPageCategory.dataset.mobile == 'false') {
+            mySliderCategory = new Swiper(sliderPageCategory, {
+                slidesPerView: 2,
+                slideClass: 'swiper-slide',
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+
+            sliderPageCategory.dataset.mobile = 'true';
+        }
+        if (window.innerWidth > 991) {
+            sliderPageCategory.dataset.mobile = 'false';
+            if (sliderPageCategory.classList.contains('swiper-container-initialized')) {
+                mySliderCategory.destroy();
+            }
+        }
+    }
+
+    // запускаем слайдер если он есть на странице
+    if (sliderPageCategory) {
+        mobileSliderPage();
+
+        window.addEventListener('resize', () => {
+            mobileSliderPage();
+        });
+    }
+    // ------------
+
     // swiperProduct
     let swiperProduct = new Swiper('.slider-product-card', {
         slidesPerView: 4,
