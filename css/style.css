@@ -50,22 +50,22 @@ body{font-family:'AvenirNextCyr 400',sans-serif;margin:0;padding:0;overflow-x:hi
 	border-radius: 50px;
 	border: none;
 	box-shadow: 0 4px 20px rgb(0 136 213 / 40%);
-	background: linear-gradient(180deg, rgba(0,143,224,1) 0%, rgba(0,112,177,1) 100%);
+	background: linear-gradient(180deg, rgba(0,143,224,1) 0%, rgba(0,112,177,1) 100%)!important;
 	cursor: pointer;
 }
 .btn:hover {
 	color: #fff;
-	background: linear-gradient(180deg, rgb(5 165 255) 20%, rgb(4 108 169) 80%);
+	background: linear-gradient(180deg, rgb(5 165 255) 20%, rgb(4 108 169) 80%)!important;
 	box-shadow: 0 8px 20px rgb(0 136 213 / 45%);
 }
 .btn-transp {
 	color: #006fad;
 	border: 1px solid #006fad;
-	background: transparent;
-	box-shadow: 0 4px 10px rgb(0 136 213 / 20%)
+	background: transparent!important;
+	box-shadow: 0 4px 10px rgb(0 136 213 / 20%)!important;
 }
 .btn-transp:hover {
-	background: linear-gradient(180deg, rgb(5 165 255) 20%, rgb(4 108 169) 80%); 
+	background: linear-gradient(180deg, rgb(5 165 255) 20%, rgb(4 108 169) 80%)!important; 
 }
 .dropdown-toggle::after {
     border-top: .3em solid transparent;
@@ -73,7 +73,6 @@ body{font-family:'AvenirNextCyr 400',sans-serif;margin:0;padding:0;overflow-x:hi
     background: url(../img/arr-bottom-min.svg) no-repeat center;
     vertical-align: 0em;
 }
-
 /*filter*/
 .filter .numbers input {
 	background-color: #f6f6f6;
@@ -357,6 +356,10 @@ body{font-family:'AvenirNextCyr 400',sans-serif;margin:0;padding:0;overflow-x:hi
 .nav-button li {
 	margin: 0 3px 10px 3px;
 }
+.nav-button .btn {
+	background: #f96332!important;
+	box-shadow: none;
+}
 .nav-button .icon-network {
 	width: 48px;
     height: 48px;
@@ -379,6 +382,18 @@ body{font-family:'AvenirNextCyr 400',sans-serif;margin:0;padding:0;overflow-x:hi
 	padding: 20px 100px;
 	text-align: center;
 	border: 1px solid red;
+}
+.vk {
+    background-color: #415e8d!important;
+}
+.vk:hover {
+	box-shadow: 0px 5px 35px 0px rgb(65, 94, 141)!important;
+}
+.insta {
+	background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)!important; 
+}
+.insta:hover {
+    box-shadow: 0px 5px 35px 0px rgb(206, 35, 98)!important; 
 }
 /*reviews*/
 .card-reviews .card-shop_logo img {
@@ -415,6 +430,43 @@ body{font-family:'AvenirNextCyr 400',sans-serif;margin:0;padding:0;overflow-x:hi
 	font-family:'AvenirNextCyr 600',sans-serif!important;
 	width: 80%;
 	margin: 15px auto 15px;
+}
+
+/*filter shop list*/
+.filter-shop {
+	box-shadow: 0 9px 19px 0 rgba(110,127,134,.44);
+}
+.card-shop {
+	padding: 15px;
+	box-shadow: 0 1px 5px rgba(0,0,0,.20);
+}
+.card-shop:hover {
+	box-shadow: 0 9px 19px 0 rgba(110,127,134,.44);
+}
+.btns-shop .btn {
+	padding: 10px 20px;
+	font-family:'AvenirNextCyr 400',sans-serif!important;
+}
+.nav-button .btn-like,
+.btn-like {
+    padding: 10px 14px!important;
+    background: #fff!important;
+    transition: 0s;
+    border: 1px solid #d22876;
+    box-shadow: none!important;
+}
+.btns-shop .btn:hover  svg,
+.btn-like:hover svg {
+    fill: #fff;
+}
+/*active like*/
+.btn-like:hover,
+.btn-like.active {
+	border-color: transparent;
+	background: linear-gradient(45deg, #cc2366 0%,#d22876 25%,#dc2745 50%,#de212e 75%,#dc2748 100%)!important;
+}
+.btn-like.active svg {
+    fill: #fff;
 }
 /*---------*/
 @media(min-width: 1400px) {

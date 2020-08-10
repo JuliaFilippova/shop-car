@@ -285,7 +285,7 @@
 		left: 0;
 		top: 5px;
 		z-index: 3;
-		background: none;
+		background: none!important;
 		box-shadow: none;
 	}
 }

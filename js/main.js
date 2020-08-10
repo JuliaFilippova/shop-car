@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
   // hamburger menu
   function burgerMenu(selector) {
-      var menu = document.querySelector(selector),
+      let menu = document.querySelector(selector),
           buttonMenu = document.querySelector('.burger-menu__btn');
 
       buttonMenu.addEventListener('click', (e) => {
