@@ -185,7 +185,9 @@
 .slider-reviews-card .swiper-button-prev {
     left: 40px;
 }
-
+.slider-reviews-card .swiper-slide {
+	width: 100%!important;
+}
 @media (max-width: 1280px){
 	/*gage-category*/
 	.slider-page-category-link .swiper-slide {
