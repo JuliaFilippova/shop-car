@@ -21,6 +21,39 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   burgerMenu('.burger-menu');
 
+
+  // function burgerMenu(selector) {
+  //   let menu = document.querySelectorAll(selector),
+  //       buttonMenu = document.querySelectorAll(".burger-menu__btn");
+
+  //   buttonMenu.forEach(e => { 
+  //     console.log(e);
+  //     if (e.target) {
+  //       e.preventDefault();
+  //     }
+  //     menu.classList.add('active');
+  //       document.body.classList.add('overflow-hidden');
+  //   })
+  // }
+  // burgerMenu('.burger-menu');
+
+
+
+
+  //fixed menu
+
+  window.addEventListener("scroll", fixedMenu);
+  function fixedMenu() {
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+        document.getElementById("menuFixed").classList.add("menu-fixed");
+    } else {
+        document.getElementById("menuFixed").classList.remove("menu-fixed");
+    }
+  }
+
+
+
+
   // menu mobile
   let slinky = $('.js-menu').slinky({
       title: true,
@@ -250,3 +283,5 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+

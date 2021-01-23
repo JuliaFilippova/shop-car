@@ -1,0 +1,27 @@
+/*personal btn*/
+.link-personal {
+	background: none;
+    border: none;
+}
+.link-personal:focus {
+	outline: none;
+}
+.drop-angle .dropdown-menu:before {
+	content: '';
+	bottom: 100%;
+    left: 15px;
+    border: solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #ffffff;
+    border-width: 10px;
+    margin-left: 10px;
+    margin-bottom: -1px;
+    z-index: 8;
+}
+.drop-angle .dropdown-menu {
+	top: 7px!important;
+}
