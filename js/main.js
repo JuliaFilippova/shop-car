@@ -2,14 +2,16 @@ window.addEventListener('DOMContentLoaded', () => {
   // hamburger menu
   function burgerMenu(selector) {
       let menu = document.querySelector(selector),
-          buttonMenu = document.querySelector('.burger-menu__btn');
+          buttonMenus = document.querySelectorAll('.burger-menu__btn');
 
-      buttonMenu.addEventListener('click', (e) => {
-          if (e.target) {
-              e.preventDefault();
-          }
-          menu.classList.toggle('active');
-          document.body.classList.toggle('overflow-hidden');
+      [...buttonMenus].map(buttonMenu =>{
+          buttonMenu.addEventListener('click', (e) => {
+              if (e.target) {
+                  e.preventDefault();
+              }
+              menu.classList.toggle('active');
+              document.body.classList.toggle('overflow-hidden');
+          })
       });
 
       document.querySelector('.menu-mobile').onclick = (e) => {
@@ -20,24 +22,6 @@ window.addEventListener('DOMContentLoaded', () => {
       }
   }
   burgerMenu('.burger-menu');
-
-
-  // function burgerMenu(selector) {
-  //   let menu = document.querySelectorAll(selector),
-  //       buttonMenu = document.querySelectorAll(".burger-menu__btn");
-
-  //   buttonMenu.forEach(e => { 
-  //     console.log(e);
-  //     if (e.target) {
-  //       e.preventDefault();
-  //     }
-  //     menu.classList.add('active');
-  //       document.body.classList.add('overflow-hidden');
-  //   })
-  // }
-  // burgerMenu('.burger-menu');
-
-
 
 
   //fixed menu
